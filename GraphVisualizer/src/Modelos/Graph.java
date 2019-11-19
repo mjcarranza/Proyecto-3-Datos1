@@ -73,7 +73,7 @@ public class Graph{
     public ArrayList<Arista> getAristas(int idGrafo) { // obtener aristas
         ArrayList<Arista> aristas = new ArrayList(); // array para almacenar las aristas del grafo
         for (Graph grafoIndex : grafos) {
-            if (grafoIndex.idGrafo == idGrafo){  // missing loop?
+            if (grafoIndex.idGrafo == idGrafo){  // falta algun ciclo o solo hay que modificar este?
                 for (Node nodeIndex : nodes) {    ///////////// REVISAR ///// REVISAR ///// REVISAR ///// REVISAR///// REVISAR///// REVISAR/////
                     aristas.addAll(nodeIndex.getAristas());
                 }
@@ -160,7 +160,6 @@ public class Graph{
     /**
      * Metodo para eliminar un grafo utilizando su id.
      * @param idGrafo id del grafo a eliminar
-     * @return 
      */
     public void BorrarGrafo (int idGrafo){
         for (Graph grafo : grafos) {
